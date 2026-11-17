@@ -68,7 +68,8 @@ p{margin:0}
 .apps{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:.9rem;font-weight:600}
 .apps a{text-underline-offset:3px}
 .hero-img{position:relative;min-width:0}
-.hero-img img{width:118%;max-width:none;margin-left:-14%;filter:drop-shadow(0 26px 22px rgba(40,20,5,.35));animation:drop .7s cubic-bezier(.2,.9,.3,1.25) both}
+.hero-img img{width:118%;max-width:none;margin-left:-14%;filter:drop-shadow(0 26px 22px rgba(40,20,5,.35));animation:drop .7s cubic-bezier(.2,.9,.3,1.25) both,spin 8s linear .7s infinite;backface-visibility:visible}
+@keyframes spin{from{transform:perspective(1400px) rotateY(0deg)}to{transform:perspective(1400px) rotateY(360deg)}}
 @keyframes drop{from{transform:translateY(-30px) rotate(-4deg)}to{transform:none}}
 .sticker{position:absolute;right:4%;top:2%;width:118px;height:118px;border-radius:50%;background:var(--cheese);display:grid;place-items:center;text-align:center;font-family:var(--display);text-transform:uppercase;font-size:1.05rem;line-height:.95;transform:rotate(12deg);border:2.5px solid var(--ink);z-index:3}
 .sticker b{display:block;font-weight:400;font-size:2rem}
